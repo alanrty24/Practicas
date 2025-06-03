@@ -1,0 +1,514 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+
+  /* Variables */
+  --morado-nav: #7658f9;
+  --morado-claro: #c7c4fd;
+  --item-hover:#D1E4F8;
+  --blue-button: #188fff;
+  --white: #fff;
+  --black: #000;
+  --color-border: #e2e6ea;
+  --border: solid 0.09rem var(--color-border);
+  --separacion:.6rem;
+  --color-letra:#D4D4D4;
+  --color-letra-publicidad:#878F98;
+  --color-publicidad:#F4F4F7;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 18% 1fr;
+  overflow: hidden;
+}
+
+/* **************** NAVBAR ****************** */
+
+/* Navbar */
+.navbar {
+  width: 100%;
+  border-bottom: var(--border);
+  background: var(--morado-nav);
+  display: grid;
+  grid-template-columns: 15% 1fr 35%;
+  grid-template-rows: 100%;
+  gap: 1rem;
+}
+
+/* **************** NAVBAR LOGO ****************** */
+
+/* Logo */
+.navbar .logo {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Logo Imgen */
+.navbar .logo .img {
+  width: 80%;
+}
+
+/* **************** NAVBAR SEARCH ****************** */
+
+/* Contenedor search */
+.navbar .search {
+  width: 100%;
+  /* height: 100%; */
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Contenedor contain */
+.navbar .search .contain {
+  width: 100%;
+  height: 55%;
+  display: grid;
+  grid-template-columns: 60% 20% 20%;
+  grid-template-rows: 100%;
+  overflow: hidden;
+  border-radius: 0.1rem;
+}
+
+/* contenedor input */
+.navbar .search .contain .input {
+  /* width: 100%; */
+  padding: 0.5rem;
+  font-size: 0.6rem;
+  border: none;
+}
+
+/* Contenedor filtro */
+.navbar .search .contain .filter {
+  width: 100%;
+  padding: 0rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.55rem;
+  background: var(--white);
+  color: var(--blue-button);
+  gap: 0.2rem;
+  padding: 0.6rem;
+}
+
+.navbar .search .contain .filter .span,
+.navbar .search .contain .filter i {
+  width: 100%;
+}
+
+/* Boton search */
+.navbar .search .contain .btn {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: var(--morado-claro);
+  color: var(--white);
+  font-size: 0.8rem;
+}
+
+/* **************** NAVBAR USER ****************** */
+/* Contenedor del Usuario */
+.navbar .user{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    gap: .3rem;
+    overflow: hidden;
+    padding: .5rem;
+    color: var(--white);
+}
+
+/* Contenedor Imagen del Usuario */
+.navbar .user .imguser{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* gap: .3rem;s */
+    overflow: hidden;
+}
+
+/* Imagen del Usuario */
+.navbar .user .imguser .img{
+    width: 30%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Nombre */
+.navbar .user .imguser .name{
+    font-size: .6rem;
+}
+
+/* Contenedor Icono grid */
+.navbar .user .grid{
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Icono grid */
+.navbar .user .grid .icon{
+    font-size: 1.2rem;
+}
+
+.navbar .user .Home{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .3rem;
+}
+
+.navbar .user .Home .icon{
+    font-size: .9rem;
+    margin: 0rem;
+    padding: 0rem;
+}
+
+.navbar .user .Home .title{
+    font-size: .7rem;
+    margin: 0rem;
+    padding: 0rem;
+}
+
+
+/* **************** MAIN ****************** */
+
+/* Main */
+.main {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 20% 1fr 20%;
+  grid-template-rows: 1fr;
+}
+
+/* **************** MAIN SIDEBAR ****************** */
+
+/* sidebar */
+.main .sidebar {
+  width: 100%;
+  border-right: var(--border);
+  display: grid;
+  grid-template-rows: 15% 1fr 30%;
+  grid-template-columns: 100%;
+  gap: .5rem;
+  background: var(--color-publicidad);
+}
+
+/* **************** MAIN SIDEBAR TOP****************** */
+/* Sidebar sección top */
+.main .sidebar .top{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--separacion);
+  font-size: .6rem;
+}
+
+/* Boton */
+.main .sidebar .top .btn{
+  width: 100%;
+  padding: .4rem;
+  background: var(--blue-button);
+  border: none;
+  color: var(--white);
+}
+
+.main .sidebar .top .btn:hover{
+  cursor: pointer;
+}
+
+/* **************** MAIN SIDEBAR MENU****************** */
+.main .sidebar .menu, .main .sidebar .views{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  padding: 0rem var(--separacion) var(--separacion);
+}
+
+/* Lista del menu */
+.main .sidebar .menu .list, .main .sidebar .views .list{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0rem;
+  padding: 0rem;
+  list-style: none;
+  font-size: .6rem;
+  gap: .4rem;
+}
+
+/* Item */
+.main .sidebar .menu .list .item{
+  width: 100%;
+  height: 100%;
+  padding-left: var(--separacion);
+  display: flex;
+  align-items: center;
+}
+
+/* LastItem */
+.main .sidebar .menu .list .lastitem{
+  width: 100%;
+  height: 100%;
+  padding-left: var(--separacion);
+  display: flex;
+  align-items: center;
+  gap: .3rem;
+}
+
+/* Icono de lastitem */
+.main .sidebar .menu .list .lastitem .icon{
+  font-size: .4rem;
+}
+
+/* Item cuando pasa por encima */
+.main .sidebar .menu .list .item:hover{
+  width: 100%;
+  cursor: pointer;
+  height: 1.2rem;
+  background-color: var(--item-hover);
+  font-weight: bold;
+  border-left: var(--blue-button) solid .1rem;
+  /* padding-left: var(--separacion); */
+}
+
+.main .sidebar .menu .list .lastitem:hover{
+  width: 100%;
+  cursor: pointer;
+  font-weight: lighter;
+}
+
+/* **************** MAIN SIDEBAR VIEWS****************** */
+
+/* Primer hijo Item */
+.main .sidebar .views .list .item:first-child{
+  width: 100%;
+  height: .7rem;
+  padding-left: var(--separacion);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 500;
+}
+
+/* h3 del item 1 */
+.main .sidebar .views .list .item:first-child h3:first-child{
+  font-size: .6rem;
+  font-weight: 500;
+}
+
+.main .sidebar .views .list .item:first-child h3:last-child{
+  font-size: .6rem;
+  padding-right: var(--separacion);
+  font-weight: 300;
+}
+
+/* Item */
+.main .sidebar .views .list .item{
+  width: 100%;
+  height: 100%;
+  padding-left: var(--separacion);
+  display: flex;
+  align-items: center;
+  gap: var(--separacion);
+}
+
+/* Item cuando pasa por encima */
+.main .sidebar .views .list .item:hover{
+  width: 100%;
+  cursor: pointer;
+  height: 1.2rem;
+  background-color: var(--item-hover);
+  font-weight: bold;
+  border-left: var(--blue-button) solid .1rem;
+  /* padding-left: var(--separacion); */
+}
+
+/* **************** MAIN CONTENT ****************** */
+
+/* Contenido del main */
+.main .content {
+  width: 100%;
+  border-right: var(--border);
+  display: grid;
+  grid-template-rows: 15% 1fr;
+}
+
+/* Navbar del main */
+.main .content .nav {
+  width: 100%;
+  border-bottom: var(--border);
+  display: grid;
+  grid-template-columns: 10% 1fr 10%;
+  padding: var(--separacion);
+}
+
+/* **************** MAIN CONTENT NAV CHECKBOX ****************** */
+
+/* Contenedor del checkbox */
+.main .content .nav .checkbox{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .3rem;
+  padding-left: .7rem;
+  overflow: hidden;
+}
+
+/* icon */
+.main .content .nav .icon{
+  font-size: .4rem;
+}
+
+/* **************** MAIN CONTENT NAV MENU****************** */
+
+.main .content .nav .menu{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Lista del menu */
+.main .content .nav .menu .list{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  font-size: .6rem;
+  gap: 1rem;
+  color: var(--color-letra);
+  margin: 0rem;
+}
+
+/* Item de la lista */
+.main .content .nav .menu .list .item{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .3rem;
+}
+
+/* Encima del item */
+.main .content .nav .menu .list .item:hover{
+  cursor: pointer;
+}
+
+/* icon del item de la lista */
+.main .content .nav .menu .list .item .icon{
+  font-size: .9rem;
+}
+/* **************** MAIN CONTENT NAV LIST ****************** */
+
+.main .content .nav .list{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: .7rem;
+}
+
+/* botton */
+.main .content .nav .list .btn{
+  background: var(--white);
+  border: none;
+  display: flex;
+  gap: .2rem;
+}
+
+/* Encima del boton */
+.main .content .nav .list .btn{
+  cursor: pointer;
+}
+
+/* Icono */
+.main .content .nav .list .btn .icon{
+  padding-top: .1rem;
+  font-size: .4rem;
+}
+
+/* **************** MAIN ANUNCIO ****************** */
+
+/* Contenido del anuncio */
+.main .anuncio {
+  width: 100%;
+  display: grid;
+  border-right: var(--border);
+  grid-template-rows: 15% 1fr;
+}
+
+/* **************** MAIN ANUNCIO NAV ****************** */
+
+/* Contenedor de la lista */
+.main .anuncio .nav {
+  width: 100%;
+  border-bottom: var(--border);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: .3rem;
+}
+
+/* Lista */
+.main .anuncio .nav .list{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+  margin: 0rem;
+  padding: 0rem;
+  color: var(--color-letra-publicidad);
+  font-size: .8rem;
+}
+
+/* Ultimo item */
+.main .anuncio .nav .list .item:last-child{
+  color: var(--blue-button);
+}
+
+/* Encima de los botones */
+.main .anuncio .nav .list .item:hover{
+  color: var(--blue-button);
+  cursor: pointer;
+}
+
+/* **************** MAIN ANUNCIO PUBLICIDAD ****************** */
+.main .anuncio .sideanuncio {
+  width: 100%;
+  background: var(--color-publicidad);
+  padding: var(--separacion);
+}
+
+.main .anuncio .sideanuncio .title{
+  width: 100%;
+  color: var(--color-letra-publicidad);
+  margin: 0rem;
+  font-size: .6rem;
+  font-weight: 500;
+}
+
+
+

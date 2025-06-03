@@ -1,0 +1,163 @@
+* {
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 20px;
+    font-family: "Roboto", sans-serif;;
+    /* variables */
+    --azul:#0061FE;
+    --blanco:#FFFFFF;
+    --fondo-main:#2B2929;
+    --sepacion-nav:.5rem;
+    --sepacion-main:1rem;
+    
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Contenedor del navbar */
+.navbar{
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+    display: flex;
+    padding: 1.2rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo */
+
+/* Contenedor del logo */
+.navbar .contimg{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+/* Imagen del logo */
+.navbar .contimg .logo{
+    height: 100%;
+    font-size: 1.5rem;
+    padding: 0.2rem;
+    background: var(--azul);
+    color: var(--blanco);
+}
+
+/* Titulo del logo */
+.navbar .contimg .title{
+    font-size: 1.2rem;
+    font-weight: bolder;
+}
+
+/* Lista de items */
+
+/* contenedor de la lista */
+.navbar .list{
+    width: 100%;
+    height: 100%;
+    margin: 0rem;
+    padding: 0rem;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: var(--sepacion-main);
+    list-style: none;
+    padding-right: 1.2rem;
+}
+
+/* item1 de la lista */
+.navbar .list .item .icon{
+    font-size: .8rem;
+}
+
+/* Registrar e iniciar sesión */
+.navbar .list .item-reg , .navbar .list .item-ini {
+    font-weight: 300;
+    font-size: 0.7rem;
+}
+
+.navbar .list .item-reg:hover , .navbar .list .item-ini:hover {
+    color: var(--azul);
+    cursor: pointer;
+}
+/* Boton Comenzar */
+.navbar .list .item .btn{
+    height: 100%;
+    width: 100%;
+    background: var(--azul);
+    border: none;
+    color: var(--blanco);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: bolder;
+}
+
+.navbar .list .item .btn:hover{
+    cursor: pointer;
+}
+
+/* Icon de sidebar */
+.navbar .list .item .menu{
+    font-size: 1.1rem;
+}
+
+/* **************************** */
+
+/* Main */
+
+.main{
+    width: 100%;
+    height: 80%;
+    padding: 2.2rem;
+    background: var(--fondo-main);
+    color: var(--blanco);
+}
+
+/* Titulo del main */
+.main .title{
+    font-size: 2.4rem;
+    font-weight: 400;
+    margin: 0rem;
+    text-align: left;
+}
+
+/* Descripcion del main */
+.main .description{
+    font-size: 0.8rem;
+    font-weight: 300;
+    margin: 0rem;
+    margin-top: .5rem;
+}
+
+/* Boton main */
+.main .btn{
+    margin-top: 1.2rem;
+    height: 4rem;
+    width: 12rem;
+    background: var(--azul);
+    border: none;
+    border-radius: .5rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: .5rem;
+}
+
+/* Titulo del boton */
+.main .btn .title{
+    font-size: 1rem;
+}
+
+/* arrow del boton */
+/* .main .btn .arrow{
+    margin-left: .5rem;
+} */
